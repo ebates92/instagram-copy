@@ -12,11 +12,15 @@ function createPhotoPopOut () {
             var thePictureContainer = createPictureContainer();
             var thePictureWindow = createPictureWindow ();
             var thePictureX = createPictureX ();
+            var scrollLeft = createScrollLeft();
+            var scrollRight = createScrollRight();
             fixedBody.classList.add('fixed');
             document.body.appendChild(thePictureContainer).appendChild(thePictureWindow).appendChild(theImage);
             thePictureContainer.appendChild(thePictureX);
+            thePictureContainer.appendChild(scrollLeft);
+            thePictureContainer.appendChild(scrollRight);
             xClicked();
-            
+            scrollImage(index,array);
         });
     });
 };
@@ -53,9 +57,28 @@ function createPictureWindow () {
 
 function createPictureX () {
     var pictureX = document.createElement('div');
+    pictureX.classList.add('clickable');
     pictureX.classList.add('picture-x');
-    pictureX.innerHTML +="X";
+    pictureX.innerHTML += "X";
     return pictureX;
+}
+
+function createScrollLeft () {
+    var scrollLeft = document.createElement('div');
+    scrollLeft.classList.add('clickable');
+    scrollLeft.classList.add('scroll');
+    scrollLeft.classList.add('scroll-left');
+    scrollLeft.innerHTML += "&lt;";
+    return scrollLeft;
+}
+
+function createScrollRight () {
+    var scrollRight = document.createElement('div');
+    scrollRight.classList.add('clickable');
+    scrollRight.classList.add('scroll');
+    scrollRight.classList.add('scroll-right');
+    scrollRight.innerHTML += "&gt;";
+    return scrollRight;
 }
 
 createPhotoPopOut();
@@ -76,26 +99,25 @@ function xClicked () {
 
 function scrollImage (index,array) {
     // finds current image
+    console.log(index);
     var currentImage = document.querySelector('.picture-window > img'); 
-    var scrollRight = document.querySelector('');
-    var scrollLeft = document.querySelector('');
+    var scrollRight = document.querySelector('.scroll-right');
+    var scrollLeft = document.querySelector('.scroll-left');
     // listens for scroll right or left
-    var scrollRightTrue = scrollRight.addEventListener('click', function(clicked) {
+    scrollRight.addEventListener('click', function(clicked) {
         clicked.preventDefault();
-        return True;
-    });
-    var scrollLeftTrue = scrollLeft.addEventListener('click', function(clicked) {
-        clicked.preventDefault();
-        return True;
-    });
-    // takes action and reviews photo array upon click
-    if (scrollRightTrue == True) {
         var newPosition = index + 1;
         var newImage = array[newPosition];
+        console.log(newPosition);
         currentImage.setAttribute('src',newImage.getAttribute('src'));
-    } else if (scrollLeftTrue == True) {
+        index = newPosition;
+    });
+    scrollLeft.addEventListener('click', function(clicked) {
+        clicked.preventDefault();
         var newPosition = index - 1;
         var newImage = array[newPosition];
+        console.log(newPosition);
         currentImage.setAttribute('src',newImage.getAttribute('src'));
-    };
-};
+        index = newPosition;
+    });
+}

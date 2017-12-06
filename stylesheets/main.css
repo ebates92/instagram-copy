@@ -19,6 +19,18 @@ body {
 
 /* everything above this line should be included in almost every file that you make */
 
+.header {
+  display: grid;
+  justify-items: center;
+  padding: 2vw;
+  margin: 1vw;
+  background-color: rgb(180, 180, 180);
+}
+
+h1 {
+  font-size: 5vh;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -26,16 +38,17 @@ body {
   overflow: hidden;
 }
 
-.container a {
-  width: 100%;
-  height: auto;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
 img {
   width: 100%;
+}
+
+.container > img {
+  width: 100%;
+  height: auto;
+  padding: .5vw;
+  display: grid;
+  align-items: center;
+  justify-content: center;  
 }
 
 .picture-container {

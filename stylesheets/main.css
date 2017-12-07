@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-  font-size: 5vh;
+  font-size: 5vw;
 }
 
 .container {
@@ -42,23 +42,49 @@ img {
   width: 100%;
 }
 
-.container > img {
+.container > a {
   width: 100%;
   height: auto;
   padding: .5vw;
-  display: grid;
-  align-items: center;
-  justify-content: center;  
+  position: relative;
 }
+
+.frontImageDiv {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 100%;
+  height: 4.5vw;
+  bottom: 4vw;
+  background-color: rgba(128, 128, 128, 0.603);
+  border-right: 1vw solid white;
+  /* margin-right: .5vw; */
+}
+
+.container h2 {
+  font-size: 1.8vw; 
+  color: white;
+  padding-right:.5vw;
+}
+
+#price {
+  grid-column-start: 2;
+  font-style: italic;
+  color: rgb(255, 169, 0);
+}
+
+
+
+/* below is the CSS for the Pop-up Window */
 
 .picture-container {
   position: absolute;
   display: grid;
   grid-template-columns: 10vw 80vw 10vw;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 10vh 70vh 20vh;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
   z-index: 1;
   background-color: rgba(128, 128, 128, 0.774);
   justify-content: center;
@@ -86,10 +112,10 @@ img {
   height: auto;
   position: absolute;
   right: 2vw;
-  top: 2vh;
+  top: 2vw;
   grid-column-start: 3;
   grid-row-start: 1;
-  font-size: 3vh;
+  font-size: 3vw;
 }
 
 .scroll {
@@ -97,7 +123,7 @@ img {
   width: auto;
   height: auto;
   grid-row-start: 2;
-  font-size: 5vh;
+  font-size: 5vw;
 }
 
 .scroll-right {
@@ -122,3 +148,41 @@ img {
   font-size: 2.5em;
 }
 
+.popup-house-info {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  align-self: start;
+  width: 100%;
+  height: 14vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: .7vw solid white;
+}
+
+.address {
+  font-size: 3vh;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin-bottom: 1vh;
+}
+
+.address2 {
+  font-size: 3vh;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  margin-bottom: .5vh;
+}
+
+.size {
+  font-size: 2vh;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+#price2 {
+  grid-column-start: 2;
+  grid-row: 2;
+  color:rgb(255, 169, 0);
+}

@@ -19,10 +19,11 @@ body {
 
 /* everything above this line should be included in almost every file that you make */
 
+/* header */
+
 .header {
   display: grid;
   justify-items: center;
-  padding: 2vw;
   margin: 1vw;
   background-color: rgb(180, 180, 180);
 }
@@ -31,10 +32,35 @@ h1 {
   font-size: 5vw;
 }
 
+.header h1 {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.nav {
+  padding: 1.5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 127, 80, 0.856);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav input, .nav button {
+  height: .5vw;
+  width:15vw;
+  height: 2.5vw;
+  font-size: 1.38vw;
+  border-radius: 12px;
+}
+
+
+/* front page below main header */
+
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 
@@ -54,15 +80,16 @@ img {
   display: grid;
   grid-template-columns: 3fr 1fr;
   width: 100%;
-  height: 4.5vw;
-  bottom: 4vw;
+  height: 6.5vw;
+  bottom: 14vw;
+  align-items: center;
   background-color: rgba(128, 128, 128, 0.603);
   border-right: 1vw solid white;
   /* margin-right: .5vw; */
 }
 
 .container h2 {
-  font-size: 1.8vw; 
+  font-size: 4.8vw; 
   color: white;
   padding-right:.5vw;
 }
@@ -81,10 +108,10 @@ img {
   position: absolute;
   display: grid;
   grid-template-columns: 10vw 80vw 10vw;
-  grid-template-rows: 10vh 70vh 20vh;
+  grid-template-rows: 15vh 70vh 15vh;
   top: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100%;
   z-index: 1;
   background-color: rgba(128, 128, 128, 0.774);
   justify-content: center;
@@ -100,7 +127,10 @@ img {
 .picture-window {
   width: 80vw;
   height: auto;
+  max-width: 850px;
   display: grid;
+  justify-self: center;
+  align-self: center;
   justify-content: center;
   align-items: center;
   grid-column-start: 2;
@@ -115,7 +145,7 @@ img {
   top: 2vw;
   grid-column-start: 3;
   grid-row-start: 1;
-  font-size: 3vw;
+  font-size: 5vw;
 }
 
 .scroll {
@@ -123,7 +153,7 @@ img {
   width: auto;
   height: auto;
   grid-row-start: 2;
-  font-size: 5vw;
+  font-size: 6vw;
 }
 
 .scroll-right {
@@ -149,11 +179,12 @@ img {
 }
 
 .popup-house-info {
-  grid-column-start: 2;
-  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
   align-self: start;
   width: 100%;
-  height: 14vh;
+  height: 14vw;
+  max-height: 140px;
   background-color: white;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -162,27 +193,64 @@ img {
 }
 
 .address {
-  font-size: 3vh;
+  font-size: 3vw;
   grid-column-start: 1;
   grid-row-start: 1;
-  margin-bottom: 1vh;
 }
 
 .address2 {
-  font-size: 3vh;
+  font-size: 3vw;
   grid-column-start: 1;
   grid-row-start: 2;
   margin-bottom: .5vh;
 }
 
 .size {
-  font-size: 2vh;
+  font-size: 2vw;
   grid-column-start: 1;
   grid-row-start: 3;
 }
 
 #price2 {
+  font-size: 4vw;
   grid-column-start: 2;
   grid-row: 2;
   color:rgb(255, 169, 0);
+}
+
+
+@media only screen and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    overflow: hidden;
+  }
+
+  .container h2 {
+    font-size: 1.8vw; 
+  }
+
+  .frontImageDiv {
+    height: 4.5vw;
+    bottom: 4vw;
+  }
+
+@media only screen and (min-width: 1000px) {
+  
+  .address, .address2 {
+    font-size: 30px;
+  }
+
+  #price2 {
+    font-size: 40px;
+  }
+
+  .address2 {
+    margin-bottom: 1px;
+  }
+
+  .size {
+    font-size: 20px;
+  }
 }

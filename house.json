@@ -1,0 +1,91 @@
+[       
+    {
+        "image": "images/house_1.jpg",
+        "street" :"151 Hale St NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"3 beds / 2 baths / 1,903 sqft",
+        "price":"$679,900"
+    },
+
+    {
+        "image":"images/house_2.jpg",
+        "street":"2017 Palifox Dr NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"3 beds / 2 baths / 1,878 sqft",
+        "price":"$589,000"
+    },
+
+    {
+        "images": "images/house_3.jpg",
+        "street":"36 Leslie St NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"4 beds / 2 baths / 1,900 sqft",
+        "price":"$429,900"
+    }, 
+
+    {
+        "images": "images/house_4.jpg",
+        "street":"491 Harold Ave NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"3 beds / 2 baths / 1,424 sqft",
+        "price":"$449,900"
+    }, 
+
+    {
+        "images": "images/house_5.jpg",
+        "street":"1892 Gordon Mnr NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"2 beds / 2 baths / --sqft",
+        "price":"$389,900"
+    }, 
+
+    {
+        "images": "images/house_6.jpg",
+        "street":"209 Lampkin St NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"1 beds / 2 baths / 1,224 sqft",
+        "price":"$365,000"
+    },
+    {
+        "images": "images/house_7.jpg",
+        "street":"1124 Faith Ave SE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"3 beds / 3 baths / 1,586 sqft",
+        "price":"$415,000"
+    }, 
+    {
+        "images":"images/house_8.jpg",
+        "street":"1741 S Ponce De Leon Ave NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"4 beds / 5 baths / 5,400 sqft",
+        "price":"$2,700,000"
+    }, 
+    {
+        "images": "images/house_9.jpg",
+        "street":"860 Peachtree St NE Unit 713,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"1 beds / 1 baths / 1,060 sqft",
+        "price":"$390,000"
+    }, 
+    {
+        "images": "images/house_10.jpg",
+        "street":"855 Peachtree St NE Unit 3209,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"1 beds / 2 baths / 1,000 sqft",
+        "price":"$375,000"
+    },
+    {
+        "images": "images/house_11.jpg",
+        "street":"1065 Peachtree St NE Unit 3005,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"2 beds / 3 baths / 2,289 sqft",
+        "price":"$1,325,000"
+    }, 
+    {  
+        "images": "images/house_12.jpg",
+        "street":"1419 Lanier Pl NE,",
+        "cityState":"Atlanta, GA 30307",
+        "size":"4 beds / 4 baths / 3,500 sqft",
+        "price":"$1,275,000"
+    }                
+]

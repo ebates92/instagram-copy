@@ -1,4 +1,6 @@
 
+//  GLOBAL VARIABLES
+
 var HOUSEDATADICTIONARY = [       
         {
             "image": "images/house_1.jpg",
@@ -91,17 +93,28 @@ var HOUSEDATADICTIONARY = [
         }                
     ]
 
+    
 var SERVER_URL = '/house.json'
 
 
 
+// AJAX PROMISES
+
 function main() {
     window.onload = function () {
         addFrontPageImages()
-
             .then(createPhotoPopOut)
     }
 };
+
+
+
+
+
+
+
+
+// SEARCH FILTERING
 
 function useSearchFilter (string) {
     var newHouseDataDictionary = HOUSEDATADICTIONARY.filter(function (thing){
@@ -136,6 +149,12 @@ function captureSearchFilter (HOUSEDATADICTIONARY) {
 };
 
 captureSearchFilter();
+
+
+
+
+
+// ON WINDOW LOAD
 
 window.onload = addFrontPageImages(HOUSEDATADICTIONARY);
 
@@ -176,7 +195,11 @@ function addFrontPageImages (houseArray) {
     createPhotoPopOut();
 };
 
-// This creates a pop-up picture window in the DOM
+
+
+
+
+// CREATES A POPUP WINDOW IN THE DOM
 
 function createPhotoPopOut () {
     var photoArray = document.querySelectorAll('[data-image]');
@@ -266,7 +289,11 @@ function createPopUpDivContainer () {
     return nestedImageContainer;
 }
 
-// This lets you exit the PopUp Picture Window
+
+
+
+
+// LETS YOU EXIT THE POPUP WINDOW
 function xClicked () {
     var xContainer = document.querySelector(".picture-x");
     xContainer.addEventListener('click', function(clicked) {
@@ -277,7 +304,12 @@ function xClicked () {
     });
 };
 
-//  Lets you scroll through images on the page
+
+
+
+
+//  LET YOU SCROLL THOUGH IMAGES IN THE POPUP WINDOW
+
 function scrollImage (index,array) {
     // finds current image
     var currentImage = document.querySelector('.picture-window > img'); 
@@ -339,6 +371,10 @@ function scrollImage (index,array) {
     };
     createHouseInfo(index);
 };
+
+
+
+// UPDATES THE IMAGES DATA AS YOU SCROLL
 
 function createHouseInfo (index) {
 
